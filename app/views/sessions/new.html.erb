@@ -1,0 +1,17 @@
+<%= form_tag sessions_path, method: :post do |f| %>
+  <fieldset>
+    <legend>Sign in</legend>
+
+    <div class="field">
+      <%= label_tag :name %><br />
+      <%= text_field_tag :name %>
+    </div>
+    <div class="field">
+      <%= label_tag :password %><br />
+      <%= password_field_tag :password %>
+    </div>
+
+    <div class="actions"><%= submit_tag "Sign in" %></div>
+  </fieldset>
+  <p>No account yet? <%= link_to "Sign up here", new_user_path %></p>
+<% end %>

@@ -1,4 +1,10 @@
 SimpleActivityDemo402::Application.routes.draw do
+
+  root 'questions#index'
+
+  resources :questions
+  resources :users
+  resources :sessions
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

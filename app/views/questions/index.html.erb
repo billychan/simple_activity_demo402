@@ -1,0 +1,8 @@
+<h2 class="headline">Questions</h2>
+<div id="questions-list">
+  <ul class="list">
+    <% @questions.each do |question| %>
+      <%= render partial: 'question', locals: { question: question } %>
+    <% end %>
+  </ul>
+</div>

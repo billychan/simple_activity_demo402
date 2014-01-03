@@ -1,0 +1,8 @@
+<% flash.each do |name, msg| %>
+  <% type = name == 'notice' ? 'success' : 'warning' %>
+  <div data-alert class="alert-box #{type}">
+    <%= msg %>
+    <a href="#" class="close">&times;</a>
+  </div>
+<% end %>
+

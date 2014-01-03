@@ -1,0 +1,16 @@
+#questions-list {
+  .list {
+    li { list-style: none }
+  }
+  .answers_count {
+    float: left;
+    padding: 3px 10px;
+    background: #eee;
+    color: #666;
+    margin: 0 10px 0 3px;
+  }
+  .info {
+    font-size: 85%;
+    color: #999;
+  }
+}

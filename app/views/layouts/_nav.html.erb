@@ -1,0 +1,33 @@
+<nav class="top-bar" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="#">SimpleActivity Demo</a></h1>
+    </li>
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
+
+  <section class="top-bar-section">
+    <!-- Right Nav Section -->
+    <ul class="right">
+      <li><%= link_to "Questions", root_path %></li>
+      <li><%= link_to "Users", users_path %></li>
+      <li class="divider"></li>
+      <li class="has-form">
+        <%= link_to "Ask Question", new_question_path, class: 'button' %>
+      </li>
+      <li class="divider"></li>
+      <li>
+        <% if current_user %>
+          <%= link_to current_user.name, "#" %>
+        <% end %>
+      </li>
+      <li class="has-form">
+        <% if current_user %>
+          <%= link_to "Sign out", session_path(current_user), method: "delete" %>
+        <% else %>
+          <%= link_to "Sign in", new_session_path, class: 'button' %>
+        <% end %>
+      </li>
+    </ul>
+  </section>
+</nav>

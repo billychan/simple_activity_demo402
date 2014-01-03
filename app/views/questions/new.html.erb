@@ -1,0 +1,25 @@
+<%= form_for @question do |f| %>
+  <fieldset>
+    <legend>Ask a question</legend>
+    <% if @question.errors.any? %>
+      <div class="error_messages">
+        <h2>Form is invalid</h2>
+        <ul>
+          <% @question.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :title %><br />
+      <%= f.text_field :title %>
+    </div>
+    <div class="field">
+      <%= f.label :body %>
+      <%= f.text_area :body, rows: 8 %>
+    </div>
+    <div class="actions"><%= f.submit "Submit", class: 'button small' %></div>
+  </fieldset>
+<% end %>
