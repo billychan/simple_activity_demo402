@@ -1,4 +1,4 @@
-<nav class="top-bar" data-topbar>
+<nav class="top-bar" data-topbar data-options="is_hover: false">
   <ul class="title-area">
     <li class="name">
       <h1><a href="#">SimpleActivity Demo</a></h1>
@@ -21,12 +21,15 @@
           <%= link_to current_user.name, "#" %>
         <% end %>
       </li>
-      <li class="has-form">
-        <% if current_user %>
-          <%= link_to "Sign out", session_path(current_user), method: "delete" %>
-        <% else %>
-          <%= link_to "Sign in", new_session_path, class: 'button' %>
-        <% end %>
+      <li class="has-dropdown">
+        <a href="#">Switch users</a>
+        <ul class="dropdown">
+          <% User.demo_users.each do |user| %>
+            <li>
+              <%= link_to user.name, switch_session_path(user), method: :post %>
+            </li>
+          <% end %>
+        </ul>
       </li>
     </ul>
   </section>

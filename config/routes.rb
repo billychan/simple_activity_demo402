@@ -4,7 +4,9 @@ SimpleActivityDemo402::Application.routes.draw do
 
   resources :questions
   resources :users
-  resources :sessions
+  resources :sessions do
+    member { post 'switch' }
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

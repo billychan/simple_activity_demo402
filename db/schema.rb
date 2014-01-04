@@ -45,12 +45,12 @@ ActiveRecord::Schema.define(version: 20140104063405) do
     t.string   "nick_name"
     t.string   "provider"
     t.string   "uid"
+    t.string   "role"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "password_digest"
   end
 
   add_index "users", ["name"], name: "index_users_on_name", unique: true
-  add_index "users", ["uid", "provider"], name: "index_users_on_uid_and_provider", unique: true
 
 end

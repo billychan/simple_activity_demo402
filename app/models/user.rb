@@ -6,7 +6,11 @@ class User < ActiveRecord::Base
 
   validate :name,
     length: {in: 5..10},
-    format: {with: /\A[a-z]\w+/}
+    format: {with: /\A[A-Za-z]\w+/}
   validate :password,
     length: {in: 4..10}
+
+  def self.demo_users
+    where(role: 'demo')
+  end
 end

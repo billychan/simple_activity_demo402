@@ -19,8 +19,18 @@ class SessionsController < ApplicationController
     redirect_to root_url, notice: "You are logged out"
   end
 
+  def switch
+    session[:user_id] = user_switch_params[:id]
+    redirect_to root_url,
+      notice: "Switched to #{current_user.name}"
+  end
+
   private
   def user_params
     params.permit(:name, :password)
+  end
+
+  def user_switch_params
+    params.permit(:id)
   end
 end
