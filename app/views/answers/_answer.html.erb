@@ -1,0 +1,7 @@
+<li id="answer#{answer.id}" data-id="#{answer.id}">
+  <%= simple_format answer.body %>
+  <div class="info">
+    Answered by
+    <%= link_to answer.author_name, answer.author %>
+  </div>
+</li>

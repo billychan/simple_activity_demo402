@@ -4,6 +4,10 @@ class QuestionsController < ApplicationController
     @questions = Question.page(params[:page])
   end
 
+  def show
+    @question = Question.find(params[:id])
+  end
+
   def new
     @question = Question.new
   end

@@ -2,7 +2,8 @@
   <span class="answers_count">
     <%= question.answers_count %>
   </span>
-  <h4><%= question.title %></h4>
+  <!-- <h4><%= question.title %></h4> -->
+  <h4><%= link_to question.title, question_path(question) %></h4>
   <p class="info">
     By <%= link_to question.author_name, question.author %>
   </p>

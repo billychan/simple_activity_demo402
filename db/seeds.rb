@@ -11,7 +11,7 @@ require 'faker'
 class SeedHelper
   def self.create_question(user)
     title = Faker::Lorem.sentence(3).chop
-    body  = Faker::Lorem.paragraphs(3).join('\n')
+    body  = Faker::Lorem.paragraphs(3).join("\n\n")
     Question.create!(title: title, body: body, user: user)
   end
 end

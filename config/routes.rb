@@ -2,8 +2,9 @@ SimpleActivityDemo402::Application.routes.draw do
 
   root 'questions#index'
 
-  resources :questions
   resources :users
+  resources :questions
+  resources :answers
   resources :sessions do
     member { post 'switch' }
   end

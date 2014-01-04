@@ -1,0 +1,16 @@
+<h4>Answers</h4>
+<% if answers.count > 0 %>
+  <ul id="answers">
+    <% answers.each do |answer| %>
+      <%= render partial: 'answers/answer', locals: {answer: answer} %>
+    <% end %>
+  </ul>
+<% else %>
+  <div class="blank-view">
+    <p><em>No answers yet.</em></p>
+  </div>
+<% end %>
+
+<div id="new-answer">
+  <%= render partial: 'answers/new', locals: {answer: answers.new} %>
+</div>

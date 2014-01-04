@@ -1,2 +1,3 @@
 $ ->
   $(document).foundation()
+  App.start()
