@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140104063405) do
+ActiveRecord::Schema.define(version: 20140107070108) do
 
   create_table "answers", force: true do |t|
     t.text     "body"
@@ -40,6 +40,18 @@ ActiveRecord::Schema.define(version: 20140104063405) do
     t.datetime "updated_at"
   end
 
+  create_table "simple_activity_activities", force: true do |t|
+    t.string   "actor_type"
+    t.integer  "actor_id"
+    t.string   "target_type"
+    t.integer  "target_id"
+    t.string   "action_key"
+    t.boolean  "display"
+    t.text     "cache"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "users", force: true do |t|
     t.string   "name"
     t.string   "nick_name"
@@ -49,6 +61,7 @@ ActiveRecord::Schema.define(version: 20140104063405) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "password_digest"
+    t.string   "gender"
   end
 
   add_index "users", ["name"], name: "index_users_on_name", unique: true

@@ -1,0 +1,8 @@
+<h5>Activities</h5>
+<ul class="side-nav" id="activities-sidebar">
+  <% Activity.all.limit(10).each do |activity| %>
+    <li>
+      <%= render_activity(activity) %>
+    </li>
+  <% end %>
+</ul>

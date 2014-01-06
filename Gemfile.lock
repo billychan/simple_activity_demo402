@@ -1,3 +1,9 @@
+PATH
+  remote: /home/billy/code/github/simple_activity
+  specs:
+    simple_activity (0.0.1)
+      rails (>= 3.2.0, < 5.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -196,6 +202,7 @@ DEPENDENCIES
   rails (= 4.0.2)
   rspec-rails (= 3.0.0.beta1)
   sass-rails (~> 4.0.0)
+  simple_activity!
   simple_form
   slim
   sqlite3

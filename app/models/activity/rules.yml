@@ -1,0 +1,17 @@
+# Sample Activity settings
+
+Answer:
+  _cache:
+    actor:
+      - name
+      - gender_ownership
+    target:
+      - body
+      - question_title
+      - question_id
+Question:
+  _cache:
+    actor:
+      - name
+    target:
+      - title

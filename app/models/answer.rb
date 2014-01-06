@@ -2,9 +2,7 @@ class Answer < ActiveRecord::Base
   belongs_to :user
   belongs_to :question
 
-  def question_id
-    question.id
-  end
+  delegate :id, :title, to: :question, prefix: true
 
   def author
     user
@@ -13,4 +11,5 @@ class Answer < ActiveRecord::Base
   def author_name
     user.name
   end
+
 end

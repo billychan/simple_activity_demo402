@@ -1,0 +1,3 @@
+<%= link_to activity.actor_name, user_path(activity.actor_id) %>
+ answered question 
+ <%= link_to activity.target_question_title, question_path(activity.target_question_id, anchor: "answer#{activity.target_id}") %>

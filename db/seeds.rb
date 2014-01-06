@@ -16,10 +16,18 @@ class SeedHelper
   end
 end
 
-names = ['Mikey', 'Mini', 'Donald', 'Goofy', 'Peter', 'Daisy']
+users = [
+  {name: 'Mikey',  gender: 'm'},
+  {name: 'Mini',   gender: 'f'},
+  {name: 'Donald', gender: 'm'},
+  {name: 'Goofy',  gender: 'm'},
+  {name: 'Peter',  gender: 'm'},
+  {name: 'Daisy',  gender: 'f'}
+]
 
-names.each do |name|
-  User.create!(name: name,
+users.each do |user|
+  User.create!(name: user[:name],
+               gender: user[:gender],
                password: 'secret',
                password_confirmation: 'secret',
                role: 'demo').tap do |user|

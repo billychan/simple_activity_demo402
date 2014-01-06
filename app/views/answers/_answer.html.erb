@@ -1,5 +1,8 @@
-<li id="answer#{answer.id}" data-id="#{answer.id}">
+<li id="answer<%= answer.id %>" data-id="<%= answer.id %>" class="answer">
   <%= simple_format answer.body %>
+  <div class="manage">
+    <%= link_to "delete", answer, method: :delete %>
+  </div>
   <div class="info">
     Answered by
     <%= link_to answer.author_name, answer.author %>

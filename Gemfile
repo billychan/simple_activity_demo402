@@ -9,6 +9,9 @@ gem 'jquery-rails', '~>2.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'foundation-rails'
 
+# Engines
+gem 'simple_activity', path: '/home/billy/code/github/simple_activity'
+
 # View
 gem 'slim'
 gem 'simple_form'
