@@ -1,0 +1,8 @@
+<div id="user-activity-feed">
+  <h3><%= @user.name %></h3>
+  <% @user.activities.limit(20).each do |activity| %>
+    <section class="section">
+      <%= render_activity(activity) %>
+    </section>
+  <% end %>
+</div>

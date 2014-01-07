@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   has_many :comments
   has_secure_password
 
-  # acts_as_activity_actor
+  acts_as_activity_actor
 
   validate :name,
     length: {in: 5..10},

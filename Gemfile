@@ -10,17 +10,13 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'foundation-rails'
 
 # Engines
-gem 'simple_activity', path: '/home/billy/code/github/simple_activity'
+gem 'simple_activity'
 
 # View
-gem 'slim'
 gem 'simple_form'
 gem 'kaminari'
 
 # Auth 
-gem 'figaro'
-gem 'omniauth'
-gem 'omniauth-github'
 gem 'bcrypt-ruby', '~> 3.1.2'
 
 # db

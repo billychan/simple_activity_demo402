@@ -1,16 +1,25 @@
 #questions-list {
   .list {
-    li { list-style: none }
-  }
-  .answers_count {
-    float: left;
-    padding: 3px 10px;
-    background: #eee;
-    color: #666;
-    margin: 0 10px 0 3px;
-  }
-  .info {
-    font-size: 85%;
-    color: #999;
+    li {
+      list-style: none;
+      padding: 0 10px 20px 60px;
+      margin-bottom: 20px;
+      position: relative;
+      .answers_count {
+        float: left;
+        position: absolute;
+        padding: 3px 10px;
+        top: 3px;
+        left: 10px;
+        background: #eee;
+        color: #666;
+      }
+      .info {
+        font-size: 80%;
+        color: #999;
+        float: right;
+        margin-right: 20px;
+      }
+    }
   }
 }
