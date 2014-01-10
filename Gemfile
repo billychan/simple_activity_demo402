@@ -20,7 +20,6 @@ gem 'kaminari'
 gem 'bcrypt-ruby', '~> 3.1.2'
 
 # db
-gem 'sqlite3'
 gem 'pg'
 
 # test
@@ -33,3 +32,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'pry-highlight'
 end
+
+gem 'rails_12factor', group: :production
+
+ruby "2.0.0"

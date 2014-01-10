@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20140107070108) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "answers", force: true do |t|
     t.text     "body"
     t.integer  "user_id"
@@ -30,7 +33,7 @@ ActiveRecord::Schema.define(version: 20140107070108) do
     t.datetime "updated_at"
   end
 
-  add_index "comments", ["commentable_type", "commentable_id"], name: "index_comments_on_commentable_type_and_commentable_id"
+  add_index "comments", ["commentable_type", "commentable_id"], name: "index_comments_on_commentable_type_and_commentable_id", using: :btree
 
   create_table "questions", force: true do |t|
     t.string   "title"
@@ -64,6 +67,6 @@ ActiveRecord::Schema.define(version: 20140107070108) do
     t.string   "gender"
   end
 
-  add_index "users", ["name"], name: "index_users_on_name", unique: true
+  add_index "users", ["name"], name: "index_users_on_name", unique: true, using: :btree
 
 end
