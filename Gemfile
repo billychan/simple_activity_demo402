@@ -21,6 +21,7 @@ gem 'bcrypt-ruby', '~> 3.1.2'
 
 # db
 gem 'pg'
+gem "faker", "~> 1.0.1"
 
 # test
 gem 'rspec-rails', '3.0.0.beta1'
@@ -28,7 +29,6 @@ gem 'rspec-rails', '3.0.0.beta1'
 # development
 group :development, :test do
   gem "factory_girl_rails"
-  gem "faker", "~> 1.0.1"
   gem 'pry-rails'
   gem 'pry-highlight'
 end
