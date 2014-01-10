@@ -1,5 +1,0 @@
-== SimpleActivity Demo
-
-This is a demo site for `simple_activity` gem, based on Rails 4.0.2.
-
-Feel free to play around.
